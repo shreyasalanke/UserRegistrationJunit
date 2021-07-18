@@ -66,29 +66,5 @@ public class UserRegistrationTest {
 		        boolean result = userRegistration.validateEmailid("shreyasalanke97@gmail.com");
 		        Assert.assertTrue(result);
 		    }
-		  @Test
-		    public void givenMobileNum_WhenSpaceIsMentioned_ShouldReturnTrue()
-		  {
-		        boolean result = userRegistration.validateMobileNum("91 7353078538");
-		        Assert.assertTrue(result);
-		    }
-		  
-		    @Test
-		    public void givenMobileNum_WhenSpaceNotMentioned_ShouldReturnFalse() {
-		        boolean result = userRegistration.validateMobileNum("918618829913");
-		        Assert.assertFalse(result);
-		    }
-		    @Test
-		    public void givenMobileNum_WhenLessDigits_ShouldReturnFalse() 
-		    {
-		        boolean result = userRegistration.validateMobileNum("98454");
-		        Assert.assertFalse(result);
-		    }
-		    @Test
-		    public void givenMobileNum_WhenNotStartWith91_ShouldReturnFalse()
-		    {
-		        boolean result = userRegistration.validateMobileNum("5432519");
-		        Assert.assertFalse(result);
-		    }
 		} 
 

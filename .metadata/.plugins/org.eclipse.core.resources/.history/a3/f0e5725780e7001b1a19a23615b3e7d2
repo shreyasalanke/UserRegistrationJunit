@@ -69,25 +69,25 @@ public class UserRegistrationTest {
 		  @Test
 		    public void givenMobileNum_WhenSpaceIsMentioned_ShouldReturnTrue()
 		  {
-		        boolean result = userRegistration.validateMobileNum("91 7353078538");
+		        boolean result = userRegistration.validateMobileNum("91 7853736579");
 		        Assert.assertTrue(result);
 		    }
 		  
 		    @Test
 		    public void givenMobileNum_WhenSpaceNotMentioned_ShouldReturnFalse() {
-		        boolean result = userRegistration.validateMobileNum("918618829913");
+		        boolean result = userRegistration.validateMobileNum("9876543210");
 		        Assert.assertFalse(result);
 		    }
 		    @Test
 		    public void givenMobileNum_WhenLessDigits_ShouldReturnFalse() 
 		    {
-		        boolean result = userRegistration.validateMobileNum("98454");
+		        boolean result = userRegistration.validateMobileNum("99674");
 		        Assert.assertFalse(result);
 		    }
 		    @Test
 		    public void givenMobileNum_WhenNotStartWith91_ShouldReturnFalse()
 		    {
-		        boolean result = userRegistration.validateMobileNum("5432519");
+		        boolean result = userRegistration.validateMobileNum("12345678");
 		        Assert.assertFalse(result);
 		    }
 		} 
