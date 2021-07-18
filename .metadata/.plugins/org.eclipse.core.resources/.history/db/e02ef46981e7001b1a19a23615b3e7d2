@@ -122,13 +122,13 @@ public class UserRegistrationTest {
 
 			@Test
 			public void givenPassword_WhenNoSpecialChar_ShouldReturnFlase() {
-				boolean result = userRegistration.validatePassword("Sharan165");
+				boolean result = userRegistration.validatePassword("QWErty456");
 				Assert.assertTrue(result);
 			}
 
 			@Test
 			public void givenPassword_WhenHasMoreThan1SpecialChar_ShouldReturnFalse() {
-				boolean result = userRegistration.validatePassword("$Hreya@185");
+				boolean result = userRegistration.validatePassword("QWErty!@#45");
 				Assert.assertTrue(result);
 			}
 
