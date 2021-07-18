@@ -61,10 +61,5 @@ public class UserRegistrationTest {
 		      boolean result = userRegistration.validateLastName("$alanke");
 		      Assert.assertFalse(result);
 		  }
-		  @Test
-		    public void givenEmailId_WhenProper_ShouldReturnTrue(){
-		        boolean result = userRegistration.validateEmailid("shreyasalanke97@gmail.com");
-		        Assert.assertTrue(result);
-		    }
-		} 
 
+}
