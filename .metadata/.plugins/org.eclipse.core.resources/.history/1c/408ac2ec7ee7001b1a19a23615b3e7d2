@@ -23,7 +23,7 @@ public class UserRegistrationTest {
      @Test
  	public void givenFirstName_WhenHasNumber_ShouldReturnFalse()
      {
- 		boolean result = userRegistration.validateFirstName("Shreya18");
+ 		boolean result = userRegistration.validateFirstName("Shreya15");
  		Assert.assertFalse(result);
  	}
 
