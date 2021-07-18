@@ -11,29 +11,29 @@ public class UserRegistration
 	private static final String MOBILE_PATTERN = "^[0-9]{0,2}[ ][0-9]{10}";
 	private static final String PASSWORD_PATTERN = "(?=.*[A-Z]+)(?=.*[0-9]+).{8,}";
 
-	public boolean validateFirstName(String fname) throws UserException
+	public boolean validateFirstName(String fname) throws UserRegistrationException
 	{
         return patternChecker(fname, NAME_PATTERN);
     }
-    public boolean validateLastName(String lName) throws UserException
+    public boolean validateLastName(String lName) throws UserRegistrationException
     {
         return patternChecker(lName, NAME_PATTERN);
     }
-    public boolean validateEmailId(String emailId) throws UserException
+    public boolean validateEmailId(String emailId) throws UserRegistrationException
     {
 		return patternChecker(emailId, EMAIL_PATTERN);
 	}
-    public boolean validateMobileNum(String mobileNum) throws UserException
+    public boolean validateMobileNum(String mobileNum) throws UserRegistrationException
     {
 		return patternChecker(mobileNum, MOBILE_PATTERN);
 	
 	}
-    public boolean validatePassword(String password) throws UserException
+    public boolean validatePassword(String password) throws UserRegistrationException
     {
 		return patternChecker(password, PASSWORD_PATTERN);
 	}
 
-    private boolean patternChecker(String input,String fieldPattern) throws UserException
+    private boolean patternChecker(String input,String fieldPattern) throws UserRegistrationException
     {
         Pattern pattern = Pattern.compile(fieldPattern);
         Matcher matcher = pattern.matcher(input);
@@ -41,13 +41,13 @@ public class UserRegistration
         {
 			boolean result = matcher.matches();
 			if (!result)
-				throw new UserException(UserException.ExceptionType.ENTERED_INVALID,
+				throw new UserRegistrationException(UserRegistrationException.ExceptionType.ENTERED_INVALID,
 						"Please give a valid Entry");
 			return result;
 		} 
         catch (NullPointerException exception)
         {
-			throw new UserException(UserException.ExceptionType.ENTERED_NULL,
+			throw new UserRegistrationException(UserRegistrationException.ExceptionType.ENTERED_NULL,
 					"Entry Should not be null ");
 		}
     }
