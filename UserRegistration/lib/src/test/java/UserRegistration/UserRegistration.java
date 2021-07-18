@@ -11,16 +11,20 @@ public class UserRegistration
 	private static final String PASSWORD_PATTERN = "(?=.*[A-Z]+)(?=.*[0-9]+).{8,}";
 	
     
-    public boolean validateFirstName(String fname) {
+    public boolean validateFirstName(String fname)
+    {
         return patternChecker(fname, NAME_PATTERN);
     }
-    public boolean validateLastName(String lName){
+    public boolean validateLastName(String lName)
+    {
         return patternChecker(lName, NAME_PATTERN);
     }
-    public boolean validateEmailid(String Emailid){
+    public boolean validateEmailid(String Emailid)
+    {
         return patternChecker(Emailid, EMAIL_PATTERN);
     }
-    public boolean validateMobileNum(String mobileNum) {
+    public boolean validateMobileNum(String mobileNum)
+    {
 		return patternChecker(mobileNum, MOBILE_PATTERN);
 	
 	}
@@ -29,7 +33,8 @@ public class UserRegistration
 	}
 
     
-    private boolean patternChecker(String input,String fieldPattern) {
+    private boolean patternChecker(String input,String fieldPattern) 
+    {
         Pattern pattern = Pattern.compile(fieldPattern);
         Matcher matcher = pattern.matcher(input);
         boolean result = matcher.matches();
