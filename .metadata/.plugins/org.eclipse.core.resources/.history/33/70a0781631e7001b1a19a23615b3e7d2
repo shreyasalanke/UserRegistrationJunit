@@ -1,0 +1,44 @@
+package com.bridgelabz;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class UserRegistrationTest {
+
+	{
+
+	    UserRegistration userRegistration = new UserRegistration()
+
+	    //Test case For first name when first letter start with upper case.
+	     @Test
+	     public void givenFirstName_WhenFirstLetterUpperCase_ShouldReturnTrue()
+	    {
+		 boolean result = userRegistration.validateFirstName("Shreya");
+		// Assert.class(result);
+		 Assert.assertFalse(result);
+		}
+	    
+	    //Test case for first name which is less than three characters.
+	     @Test
+	     public void givenFirstName_WhenLessThanThreeChars_ShouldReturnFalse()
+	     {
+		   boolean result = userRegistration.validateFirstName("Sh");
+		   Assert.assertFalse(result);
+	    }
+	    
+	     //test case for first name which has a number.
+	    @Test
+	 	public void givenFirstName_WhenHasNumber_ShouldReturnFalse()
+	    {
+	 		boolean result = userRegistration.validateFirstName("Shreya15");
+	 		Assert.assertFalse(result);
+	 	}
+
+	     //Test case for first name which has a special character.
+	    @Test
+	    public void givenFirstName_WhenHasSpecialChar_ShouldReturnFalse()
+	    {
+		  boolean result = userRegistration.validateFirstName("$hreya");
+		  //Assert.assertFalse(result);
+	    }
+	}
