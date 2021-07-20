@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="UserRegistrationTest" project="lib" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="UserRegistration.UserRegistrationTest" time="0.0">
-    <testcase name="givenFirstName_WhenLessThanThreeChars_ShouldReturnFalse" classname="UserRegistration.UserRegistrationTest" time="0.0"/>
-    <testcase name="givenFirstName_WhenHasSpecialChar_ShouldReturnFalse" classname="UserRegistration.UserRegistrationTest" time="0.0"/>
-    <testcase name="givenFirstName_WhenHasNumber_ShouldReturnFalse" classname="UserRegistration.UserRegistrationTest" time="0.0"/>
-    <testcase name="givenFirstName_WhenFirstLetterUpperCase_ShouldReturnTrue" classname="UserRegistration.UserRegistrationTest" time="0.0"/>
-  </testsuite>
-</testrun>
